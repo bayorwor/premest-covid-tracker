@@ -14,7 +14,7 @@ const Stats = ({ url }) => {
       </div>
       <div className="recovered-card">
         <h2 className="title">RECOVERED CASES </h2>
-        <h2>{stats.confirmed.value}</h2>
+        <h2>{stats.recovered.value}</h2>
       </div>
       <div className="death-card">
         <h2 className="title">DEATH CASES </h2>
