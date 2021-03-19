@@ -8,7 +8,6 @@ section {
 .confirmed-card,
 .death-card,
 .recovered-card {
-  border: 1px solid #000;
   height: 150px;
   width: 300px;
   margin: 10px;
@@ -27,15 +26,16 @@ section {
   background-color: green;
   color: white;
 }
+.title {
+  border-bottom: 2px solid black;
+}
 select {
-  height: 30px;
+  height: 40px;
   border: none;
   margin: 30px;
   padding: 7px 10px;
-}
-select option {
+  border-bottom: 1px solid gray;
   font-size: 20px;
-  border-bottom: 1px solid rgb(22, 22, 22);
 }
 
 header {
@@ -47,4 +47,5 @@ header {
 .form-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }

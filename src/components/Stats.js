@@ -9,15 +9,15 @@ const Stats = ({ url }) => {
   return (
     <section>
       <div className="confirmed-card">
-        <h2>CONFIRMED CASES </h2>
+        <h2 className="title">CONFIRMED CASES </h2>
         <h2>{stats.confirmed.value}</h2>
       </div>
       <div className="recovered-card">
-        <h2>RECOVERED CASES </h2>
+        <h2 className="title">RECOVERED CASES </h2>
         <h2>{stats.confirmed.value}</h2>
       </div>
       <div className="death-card">
-        <h2>DEATH CASES </h2>
+        <h2 className="title">DEATH CASES </h2>
         <h2>{stats.deaths.value}</h2>
       </div>
     </section>

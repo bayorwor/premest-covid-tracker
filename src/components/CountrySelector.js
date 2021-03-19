@@ -8,10 +8,6 @@ const CountrySelector = () => {
   );
   const [selctedCountry, setSelectedCountry] = useState("GH");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   if (loading) return <h1>loading ...</h1>;
   if (error) return <h1>error</h1>;
 
@@ -19,18 +15,16 @@ const CountrySelector = () => {
     <>
       <div className="form-container">
         <h2>Now showing for : </h2>
-        <form onSubmit={handleSubmit}>
-          <select
-            value={`${selctedCountry}`}
-            onChange={(e) => setSelectedCountry(e.target.value)}
-          >
-            {countries.countries.map((country) => (
-              <option value={`${country.iso3}`} key={`${country.iso3}`}>
-                {country.name}
-              </option>
-            ))}
-          </select>
-        </form>
+        <select
+          value={`${selctedCountry}`}
+          onChange={(e) => setSelectedCountry(e.target.value)}
+        >
+          {countries.countries.map((country) => (
+            <option value={`${country.iso3}`} key={`${country.iso3}`}>
+              {country.name}
+            </option>
+          ))}
+        </select>
       </div>
       <Stats
         url={`https://covid19.mathdro.id/api/countries/${selctedCountry}`}
